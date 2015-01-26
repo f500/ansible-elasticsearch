@@ -1,8 +1,9 @@
 ---
 
-# version
+# install
 
 elasticsearch_version: 1.1
+elasticsearch_state: present
 
 # elasticsearch.yml
 

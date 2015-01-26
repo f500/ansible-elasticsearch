@@ -15,6 +15,10 @@ Select which version of Elasticsearch should be installed (`0.90`, `1.0` or `1.1
 
     elasticsearch_version: 1.1
 
+Select the prefered state of the package (`present` or `latest`):
+
+    elasticsearch_state: present
+
 These configuration variables are used to create `/etc/elasticsearch/elasticsearch.yml`:
 
     elasticsearch_cluster_name: elasticsearch

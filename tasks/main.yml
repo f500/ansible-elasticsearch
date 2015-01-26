@@ -7,7 +7,7 @@
   apt_repository: "repo='deb http://packages.elasticsearch.org/elasticsearch/{{ elasticsearch_version }}/debian stable main' state=present update_cache=yes"
 
 - name: install elasticsearch
-  apt: pkg=elasticsearch state=present
+  apt: "pkg=elasticsearch state={{ elasticsearch_state }}"
 
 - name: write elasticsearch.yml
   template: src=elasticsearch.yml.j2 dest=/etc/elasticsearch/elasticsearch.yml owner=root group=root mode=0644

@@ -8,6 +8,14 @@ galaxy_info:
   min_ansible_version: 1.4
 
   platforms:
+    - name: Redhat
+      versions:
+        - 6
+        - 7
+    - name: Ubuntu
+      versions:
+        - precise
+        - trusty
     - name: Debian
       versions:
         - wheezy

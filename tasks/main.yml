@@ -19,3 +19,9 @@
   when: elasticsearch_logging_template is defined and elasticsearch_logging_template|length
   notify:
     - restart elasticsearch
+
+- name: enable elasticsearch service
+  service:
+    name: elasticsearch
+    enabled: yes
+    state: started

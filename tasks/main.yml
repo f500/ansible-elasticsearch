@@ -32,7 +32,4 @@
     - restart elasticsearch
 
 - name: enable elasticsearch service
-  service:
-    name: elasticsearch
-    enabled: yes
-    state: started
+  service: name: elasticsearch enabled: yes state: started

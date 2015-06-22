@@ -19,10 +19,10 @@ install:
   # Add ansible.cfg to pick up roles path.
   - printf "[defaults]\nroles_path = ../" > ansible.cfg
 
-script:
   # Run the galaxy install
-  - ansible-galaxy install -r tests/galaxy.yml
+  - ansible-galaxy install -r tests/galaxy.txt
 
+script:
   # Check the role/playbook's syntax.
   - ansible-playbook -i tests/inventory tests/test.yml --syntax-check
 

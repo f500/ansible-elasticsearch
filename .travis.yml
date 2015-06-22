@@ -7,7 +7,7 @@ env:
   - ANSIBLE_VERSION=1.6
   - ANSIBLE_VERSION=1.7
   - ANSIBLE_VERSION=1.8
-  - ANSIBLE_VERSION=1.9
+  - ANSIBLE_VERSION=1.9.1
 
 before_install:
   - sudo apt-get update -qq
@@ -22,6 +22,9 @@ install:
 script:
   # Check the role/playbook's syntax.
   - ansible-playbook -i tests/inventory tests/test.yml --syntax-check
+
+  # Run the galaxy install
+  - ansible-galaxy install -r tests/galaxy.yml
 
   # Run the role/playbook with ansible-playbook.
   - ansible-playbook -i tests/inventory tests/test.yml --connection=local --sudo -vvvv

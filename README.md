@@ -49,9 +49,22 @@ These configuration variables are used to create `/etc/elasticsearch/elasticsear
     elasticsearch_network_host: "{{ ansible_eth0.ipv4.address }}"
     elasticsearch_transport_tcp_port: 9300
     elasticsearch_transport_tcp_compress: true
+
+    elasticsearch_http_enabled: true
     elasticsearch_http_port: 9200
     elasticsearch_http_max_content_length: 100mb
-    elasticsearch_http_enabled: true
+    elasticsearch_http_host: ~
+    elasticsearch_http_bind_host: ~
+    elasticsearch_http_publish_host: ~
+    elasticsearch_http_compression: ~
+    elasticsearch_http_compression_level: ~
+
+    elasticsearch_http_cors_enabled: false
+    elasticsearch_http_cors_allow_origin: ~
+    elasticsearch_http_cors_max_age: ~
+    elasticsearch_http_cors_allow_methods: ~
+    elasticsearch_http_cors_allow_headers: ~
+    elasticsearch_http_cors_allow_credentials: ~
 
     elasticsearch_gateway_type: local
     elasticsearch_gateway_recover_after_nodes: 1

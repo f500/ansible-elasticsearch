@@ -2,5 +2,7 @@
 # test file
 - hosts: localhost
   remote_user: root
+  vars:
+    elasticsearch_network_host: 127.0.0.1
   roles:
     - ansible-elasticsearch

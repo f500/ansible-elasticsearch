@@ -98,7 +98,7 @@ http.compression: {{ elasticsearch_http_compression }}
 http.compression_level: {{ elasticsearch_http_compression_level }}
 {% endif %}
 
-{% if http_cors_enabled %}
+{% if elasticsearch_http_cors_enabled %}
 http.cors.enabled: true
 {% if elasticsearch_http_cors_allow_origin %}
 http.cors.allow-origin: {{ elasticsearch_http_cors_allow_origin }}

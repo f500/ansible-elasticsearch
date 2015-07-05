@@ -81,6 +81,44 @@ transport.tcp.compress: {{ elasticsearch_transport_tcp_compress }}
 http.enabled: true
 http.port: {{ elasticsearch_http_port }}
 http.max_content_length: {{ elasticsearch_http_max_content_length }}
+
+{% if elasticsearch_http_host %}
+http.host: {{ elasticsearch_http_host }}
+{% endif %}
+{% if elasticsearch_http_bind_host %}
+http.bind_host: {{ elasticsearch_http_bind_host }}
+{% endif %}
+{% if elasticsearch_http_publish_host %}
+http.publish_host: {{ elasticsearch_http_publish_host }}
+{% endif %}
+{% if elasticsearch_http_compression %}
+http.compression: {{ elasticsearch_http_compression }}
+{% endif %}
+{% if elasticsearch_http_compression_level %}
+http.compression_level: {{ elasticsearch_http_compression_level }}
+{% endif %}
+
+{% if elasticsearch_http_cors_enabled %}
+http.cors.enabled: true
+{% if elasticsearch_http_cors_allow_origin %}
+http.cors.allow-origin: {{ elasticsearch_http_cors_allow_origin }}
+{% endif %}
+{% if elasticsearch_http_cors_max_age %}
+http.cors.max-age: {{ elasticsearch_http_cors_max_age }}
+{% endif %}
+{% if elasticsearch_http_cors_allow_methods %}
+http.cors.allow-methods: {{ elasticsearch_http_cors_allow_methods }}
+{% endif %}
+{% if elasticsearch_http_cors_allow_headers %}
+http.cors.allow-headers: {{ elasticsearch_http_cors_allow_headers }}
+{% endif %}
+{% if elasticsearch_http_cors_allow_credentials %}
+http.cors.allow-credentials: {{ elasticsearch_http_cors_allow_credentials }}
+{% endif %}
+{% else %}
+http.cors.enabled: false
+{% endif %}
+
 {% else %}
 http.enabled: false
 {% endif %}

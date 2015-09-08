@@ -2,7 +2,7 @@
 
 # install
 
-elasticsearch_version: 1.5
+elasticsearch_version: 1.7
 elasticsearch_state: present
 
 # elasticsearch.yml

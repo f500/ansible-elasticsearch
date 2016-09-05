@@ -30,7 +30,7 @@ elasticsearch_bootstrap_mlockall: false
 
 elasticsearch_network_bind_host: ~
 elasticsearch_network_publish_host: ~
-elasticsearch_network_host: "{{ ansible_eth0.ipv4.address }}"
+elasticsearch_network_host: "{{ ansible_default_ipv4.address  }}"
 elasticsearch_transport_tcp_port: 9300
 elasticsearch_transport_tcp_compress: true
 

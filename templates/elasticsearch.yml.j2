@@ -125,7 +125,9 @@ http.enabled: false
 
 ################################### Gateway ###################################
 
+{% if elasticsearch_version | version_compare('2.0', '<') %}
 gateway.type: {{ elasticsearch_gateway_type }}
+{% endif %}
 gateway.recover_after_nodes: {{ elasticsearch_gateway_recover_after_nodes }}
 gateway.recover_after_time: {{ elasticsearch_gateway_recover_after_time }}
 gateway.expected_nodes: {{ elasticsearch_gateway_expected_nodes }}

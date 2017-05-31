@@ -15,7 +15,7 @@ Role Variables
 
 Select which version of Elasticsearch should be installed (`0.90`, `1.0` to `1.7`, `2.0` to `2.4`, `5.0` to `5.4`):
 
-    elasticsearch_version: 1.5
+    elasticsearch_version: 1.7
 
 Select the prefered state of the package (`present` or `latest`):
 

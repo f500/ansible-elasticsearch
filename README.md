@@ -13,7 +13,7 @@ None.
 Role Variables
 --------------
 
-Select which version of Elasticsearch should be installed (`0.90`, `1.0` to `1.5`):
+Select which version of Elasticsearch should be installed (`0.90`, `1.0` to `1.7`, `2.0` to `2.4`, `5.0` to `5.4`):
 
     elasticsearch_version: 1.5
 
